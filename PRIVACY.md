@@ -1,14 +1,14 @@
-# BookmarkSync Privacy Policy
+# Bookmarkora Privacy Policy
 
 **Last updated:** June 22, 2026
 
-BookmarkSync ("the Extension" or "the App") helps you sync browser bookmarks with storage you control: **GitHub Gist**, your own **Gitea** server, a **WebDAV** folder, or **S3-compatible** object storage. Optional **end-to-end encryption** keeps remote bookmark files encrypted; the passphrase stays in your browser session (extension) or in app memory (macOS) and is never sent to developers.
+Bookmarkora ("the Extension" or "the App") helps you sync browser bookmarks with storage you control: **GitHub Gist**, your own **Gitea** server, a **WebDAV** folder, or **S3-compatible** object storage. Optional **end-to-end encryption** keeps remote bookmark files encrypted; the passphrase stays in your browser session (extension) or in app memory (macOS) and is never sent to developers.
 
 Optional **Tools** features (duplicate cleanup, broken-link check, snapshots, named **tab sessions**, and related utilities) run on your device. They use bookmark or tab data only when **you** open Tools and start an action—or when you enable scheduled tool scans.
 
 ## Summary
 
-- BookmarkSync **does not operate developer-owned servers** for sync or analytics.
+- Bookmarkora **does not operate developer-owned servers** for sync or analytics.
 - Your bookmarks, credentials, tab sessions, and settings stay **on your device** and in **storage you configure**.
 - We do **not** sell, rent, or share your data with third parties for advertising or analytics.
 - The Extension does **not** collect your general browsing history. `tabs` / `webNavigation` are used only for Tools you explicitly use (e.g. tab sessions, broken-link check), not for background tracking.
@@ -37,7 +37,7 @@ If you provide credentials, they are stored on your device only:
 - S3 access key and secret key  
 - E2E encryption passphrase (session-only in the extension; in-memory on macOS when enabled)
 
-These are used only to access **your** configured remote storage. They are **not** transmitted to BookmarkSync developers.
+These are used only to access **your** configured remote storage. They are **not** transmitted to Bookmarkora developers.
 
 ### Local snapshots and logs
 
@@ -52,9 +52,9 @@ When you sync, bookmark data, tab session files, and related JSON are sent only 
 - **Your WebDAV server** — only the origin/folder URL you configure; the browser extension requests host permission at runtime  
 - **Your S3-compatible endpoint** — only the endpoint and bucket you configure; the browser extension requests host permission at runtime when needed  
 
-Broken-link checks initiated in Tools may cause the Extension to open **background tabs** to URLs already present in **your bookmarks**. Those requests go directly to the target websites—not to BookmarkSync developers.
+Broken-link checks initiated in Tools may cause the Extension to open **background tabs** to URLs already present in **your bookmarks**. Those requests go directly to the target websites—not to Bookmarkora developers.
 
-No bookmark, credential, or tab data is sent to the BookmarkSync author or any intermediary service operated for BookmarkSync.
+No bookmark, credential, or tab data is sent to the Bookmarkora author or any intermediary service operated for Bookmarkora.
 
 ## Permissions (Browser Extension)
 
@@ -82,7 +82,7 @@ The macOS companion app reads Safari bookmarks via `Bookmarks.plist` when you gr
 
 ## Children
 
-BookmarkSync is not directed at children under 13, and we do not knowingly collect personal information from children.
+Bookmarkora is not directed at children under 13, and we do not knowingly collect personal information from children.
 
 ## Changes
 
@@ -94,11 +94,11 @@ For privacy questions, open an issue in the project repository or contact the pu
 
 ---
 
-# BookmarkSync 隐私政策（中文）
+# Bookmarkora 隐私政策（中文）
 
 **最后更新：** 2026 年 6 月 22 日
 
-BookmarkSync（「本扩展」或「本应用」）帮助您将浏览器书签同步到您自行控制的存储：**GitHub Gist**、**私有 Gitea**、**WebDAV 目录**或 **S3 兼容**对象存储。可选 **端到端加密** 用于保护远程书签文件；加密口令保存在浏览器会话（扩展）或应用内存（macOS）中，**不会**发送给开发者。
+Bookmarkora（「本扩展」或「本应用」）帮助您将浏览器书签同步到您自行控制的存储：**GitHub Gist**、**私有 Gitea**、**WebDAV 目录**或 **S3 兼容**对象存储。可选 **端到端加密** 用于保护远程书签文件；加密口令保存在浏览器会话（扩展）或应用内存（macOS）中，**不会**发送给开发者。
 
 可选 **工具中心** 功能（重复书签清理、死链检测、快照、**标签页会话**等）均在您的设备上运行，仅在 **您** 打开工具并执行操作时—or 在您启用定时工具扫描时—使用相关书签或标签页数据。
 
@@ -125,7 +125,7 @@ BookmarkSync（「本扩展」或「本应用」）帮助您将浏览器书签�
 
 ### 凭据
 
-以下凭据 **仅保存在本机**，用于访问您配置的远程存储，**不会**发送给 BookmarkSync 开发者：
+以下凭据 **仅保存在本机**，用于访问您配置的远程存储，**不会**发送给 Bookmarkora 开发者：
 
 - GitHub Personal Access Token  
 - Gitea Token  
@@ -146,9 +146,9 @@ BookmarkSync（「本扩展」或「本应用」）帮助您将浏览器书签�
 - **您指定的 WebDAV 服务器** — 扩展在运行时按您配置的地址申请主机权限  
 - **您指定的 S3 兼容端点** — 仅访问您配置的端点与存储桶；需要时由扩展在运行时申请主机权限  
 
-在工具中心发起 **死链检测** 时，扩展可能对 **书签中已有的 URL** 打开后台标签页进行检测；请求直接发往目标网站，**不经过** BookmarkSync 开发者。
+在工具中心发起 **死链检测** 时，扩展可能对 **书签中已有的 URL** 打开后台标签页进行检测；请求直接发往目标网站，**不经过** Bookmarkora 开发者。
 
-不向 BookmarkSync 作者或任何中间服务传输书签、凭据或标签页数据。
+不向 Bookmarkora 作者或任何中间服务传输书签、凭据或标签页数据。
 
 ## 权限说明（浏览器扩展）
 

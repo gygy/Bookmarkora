@@ -1,26 +1,29 @@
-# BookmarkSync
+# Bookmarkora
+
+> Formerly **BookmarkSync**. Default remote sync file remains `BookmarkSync.json` for existing repos.
 
 **Cross-browser bookmark sync** — keep bookmarks in sync across Chrome, Firefox, Edge, and Safari using storage **you** control.
 
-Version **1.1.47**
+Version **1.1.96**
 
 [简体中文](README_cn.md)
 
 ---
 
-## What's new in v1.1.47
+## What's new in v1.1.96
 
 ```
-v1.1.47
+v1.1.96
 
-FIXED: Chrome package no longer includes Firefox-only browser_specific_settings (broke sideload on mobile Chromium)
+NEW: Renamed to Bookmarkora (same extension ID; your sync settings and remote files are unchanged)
+IMPROVED: Organize — plan-first flow with intensity & confidence controls; Smart Organize (Experimental) in General
 ```
 
 ---
 
-## What is BookmarkSync?
+## What is Bookmarkora?
 
-BookmarkSync backs up and syncs your browser bookmarks to **your own** remote storage. Your data never passes through a BookmarkSync server — it stays on your device or in accounts you configure.
+Bookmarkora backs up and syncs your browser bookmarks to **your own** remote storage. Your data never passes through a Bookmarkora server — it stays on your device or in accounts you configure.
 
 **Supported remote storage**
 
@@ -29,7 +32,7 @@ BookmarkSync backs up and syncs your browser bookmarks to **your own** remote st
 - **WebDAV** — Nextcloud, Synology NAS, or any WebDAV folder  
 - **S3-compatible** — AWS S3, Cloudflare R2, MinIO  
 
-**Extension highlights (v1.1.47)**
+**Extension highlights (v1.1.96)**
 
 - **Tools hub** — health panel, duplicates, broken links, snapshots, merge preview, version history, tab sessions  
 - Optional **end-to-end encryption** for remote bookmark files  
@@ -50,18 +53,18 @@ You can use the extension alone, the Mac app alone, or both — point them at th
 
 ### Browser extension
 
-1. Install **BookmarkSync** from your browser’s extension store:  
-   - [Chrome Web Store — BookmarkSync](https://chromewebstore.google.com/detail/mdilbiflbhofoeokchmohbkdbobbegab) (also works for Edge)  
-   - [Firefox Add-ons — BookmarkSync](https://addons.mozilla.org/firefox/addon/bookmarksync-cloud-sync/)  
+1. Install **Bookmarkora** from your browser’s extension store:  
+   - [Chrome Web Store — Bookmarkora](https://chromewebstore.google.com/detail/mdilbiflbhofoeokchmohbkdbobbegab) (also works for Edge)  
+   - [Firefox Add-ons — Bookmarkora](https://addons.mozilla.org/firefox/addon/bookmarksync-cloud-sync/)  
 2. Pin the extension icon to the toolbar for quick access.  
 3. Click the icon → **Settings** (gear) to connect your remote storage.
 
 ### macOS app (Safari)
 
-1. Download **BookmarkSync.app** from the release page (or copy to `/Applications`).  
+1. Download **Bookmarkora.app** from the release page (or copy to `/Applications`).  
 2. Open the app.  
 3. When prompted, grant **Full Disk Access** so the app can read Safari bookmarks:  
-   **System Settings → Privacy & Security → Full Disk Access → add BookmarkSync**  
+   **System Settings → Privacy & Security → Full Disk Access → add Bookmarkora**  
    Alternatively, use **Choose bookmark file** inside the app to pick `Bookmarks.plist` manually.  
 4. Configure the same remote storage as in the browser extension (if you use both).
 
@@ -89,7 +92,7 @@ If a Safari version is provided, install the companion app from the Mac App Stor
 
 1. Create a [Personal Access Token](https://github.com/settings/tokens/new) with **gist** access.  
 2. Create a new [Gist](https://gist.github.com/) and copy its ID from the URL.  
-3. In BookmarkSync settings:  
+3. In Bookmarkora settings:  
    - **GitHub Token** — paste the token  
    - **Gist ID** — paste the ID  
    - **File name** — default `BookmarkSync` (must match the file in the Gist)  
@@ -98,7 +101,7 @@ If a Safari version is provided, install the companion app from the Mac App Stor
 ### Private Gitea
 
 1. Create a repository on your Gitea server and generate an access token with repo write access.  
-2. In BookmarkSync settings:  
+2. In Bookmarkora settings:  
    - **Gitea URL** — e.g. `https://gitea.example.com`  
    - **Token**, **owner**, **repo**, **branch** (default `main`)  
 3. Bookmarks are saved as `BookmarkSync.json` in the repository root.  
@@ -107,7 +110,7 @@ If a Safari version is provided, install the companion app from the Mac App Stor
 ### WebDAV
 
 1. Create or choose a folder on your WebDAV server.  
-2. In BookmarkSync settings:  
+2. In Bookmarkora settings:  
    - **WebDAV folder URL** — full path to the folder, e.g.  
      `https://cloud.example.com/remote.php/dav/files/username/bookmarks/`  
    - **Username** and **password** (Basic auth)  
@@ -163,7 +166,7 @@ The Mac app offers the same sync actions for **Safari** bookmarks: upload, downl
 
 ## Snapshots & safety
 
-- Before **clear local**, **clear remote**, or large overwrites, BookmarkSync creates a **snapshot** when possible.  
+- Before **clear local**, **clear remote**, or large overwrites, Bookmarkora creates a **snapshot** when possible.  
 - View and restore snapshots in **Settings → Data** (extension) or the **Data** tab (Mac app).  
 - Config backups let you restore previous connection settings.
 
@@ -172,13 +175,13 @@ The Mac app offers the same sync actions for **Safari** bookmarks: upload, downl
 
 ## Downloads
 
-**Chrome:** Install from the [Chrome Web Store — BookmarkSync](https://chromewebstore.google.com/detail/mdilbiflbhofoeokchmohbkdbobbegab).
+**Chrome:** Install from the [Chrome Web Store — Bookmarkora](https://chromewebstore.google.com/detail/mdilbiflbhofoeokchmohbkdbobbegab).
 
-**Firefox:** Install from [Firefox Add-ons — BookmarkSync](https://addons.mozilla.org/firefox/addon/bookmarksync-cloud-sync/).
+**Firefox:** Install from [Firefox Add-ons — Bookmarkora](https://addons.mozilla.org/firefox/addon/bookmarksync-cloud-sync/).
 
-For manual load (developer mode), get the latest packages (v1.1.47) from [dist/](dist/):
+For manual load (developer mode), get the latest packages (v1.1.96) from [dist/](dist/):
 
-- [BookmarkSync-1.1.47-chrome.zip](dist/BookmarkSync-1.1.47-chrome.zip)
+- [Bookmarkora-1.1.96-chrome.zip](dist/Bookmarkora-1.1.96-chrome.zip)
 
 Product screenshots: [screenshots/](screenshots/) (English at root, zh_CN/ for Chinese).
 
@@ -186,7 +189,7 @@ Product screenshots: [screenshots/](screenshots/) (English at root, zh_CN/ for C
 
 ## Privacy
 
-BookmarkSync does not operate sync servers. Bookmarks and credentials are stored on your device or in storage you configure (GitHub, Gitea, WebDAV, S3).  
+Bookmarkora does not operate sync servers. Bookmarks and credentials are stored on your device or in storage you configure (GitHub, Gitea, WebDAV, S3).  
 
 Full policy: [Privacy Policy](PRIVACY.md)
 
@@ -198,7 +201,7 @@ Full policy: [Privacy Policy](PRIVACY.md)
 Yes. Use the same Gist / Gitea / WebDAV in the Chrome extension and the macOS app. Run **merge** on each side when switching devices.
 
 **Is my token safe?**  
-Tokens and passwords are stored in browser sync storage or local Mac settings — not sent to BookmarkSync developers. Revoke tokens anytime on GitHub/Gitea/WebDAV.
+Tokens and passwords are stored in browser sync storage or local Mac settings — not sent to Bookmarkora developers. Revoke tokens anytime on GitHub/Gitea/WebDAV.
 
 **Download vs merge?**  
 **Merge** combines local and remote (safer). **Download** replaces local bookmarks entirely with remote.

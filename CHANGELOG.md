@@ -1,8 +1,285 @@
 # Changelog
 
-All notable changes to BookmarkSync are documented here.
+All notable changes to Bookmarkora are documented here.
 
 ## [Unreleased]
+
+## [1.1.96] - 2026-07-26
+
+### Fixed
+- **Rebrand leftovers**: restore Firefox AMO store slug `bookmarksync-cloud-sync` (display name remains Bookmarkora); Mac Keychain service `com.bookmarksync.macos` and local snapshot dir `BookmarkSync/Snapshots`; Safari extension bundle id `com.bookmarksync.extension`; README Gist default filename `BookmarkSync`; gist verify placeholder examples.
+
+## [1.1.95] - 2026-07-26
+
+### Changed
+- **Brand**: product display name **BookmarkSync → Bookmarkora** (extension title, UI, docs, package artifacts). Store-oriented titles keep sync keywords (e.g. `Bookmarkora · 书签同步` / `Bookmarkora — Bookmark Sync`).
+- **Compatibility**: remote sync filenames (`BookmarkSync.json`, `BookmarkSync/_snapshots/`), Firefox id `bookmarksync@gygy`, and Mac bundle id `com.bookmarksync.app` are **unchanged** so existing installs keep syncing.
+
+## [1.1.94] - 2026-07-26
+
+### Changed
+- **Organize (extension)**: General settings card title 「整理偏好」→「智能整理(实验)」across locales; Mac N/A
+
+## [1.1.93] - 2026-07-23
+
+### Changed
+- **Organize (extension)**: planning-first flow — intensity (gentle/balanced/bold), confidence default selection, preview-only CTA, clearer apply confirm with snapshot/no-delete; Mac N/A (organize is extension-only)
+
+## [1.1.92] - 2026-07-23
+
+### Changed
+- **整理助手体验**：按易用性 / 吸引力 / 交互反馈 / 去 AI 痕迹四维迭代——助手语气问候、主按钮「帮我整理」、生成中轮播提示、健康分可读文案、周小结有内容才出现、去掉重复空态与「AI/模型」主文案。Mac：仅同步版本号。
+
+## [1.1.91] - 2026-07-23
+
+### Changed
+- **整理页入口**：去掉重复的「API 设置」，仅在主操作旁保留一处「模型设置」；通用页卡片改为「整理 · AI 模型」。Mac：仅同步版本号。
+
+## [1.1.90] - 2026-07-23
+
+### Changed
+- **整理提速**：本地方案目标 &lt;6s；AI 增强软超时 4s（超时自动回退本地）；缩小 LLM 样本；enrich 仅对推荐方案全量算 impact；近重复检测与主题扫描降复杂度；树只读一次。Mac：仅同步版本号。
+
+## [1.1.89] - 2026-07-22
+
+### Added
+- **整理 · 文件夹智能总览**：基于全部书签深度分析——内容主题、现有文件夹合理性（判定/分数/理由）、建议目录与证据说明、认知模型与深度元信息。Mac：仅同步版本号（整理为扩展独有）。
+
+## [1.1.88] - 2026-07-22
+
+### Changed
+- **文案**：设置页 Tab「标签智能整理」改为「整理」（`optionsTabOrganize`）。Mac：仅同步版本号。
+
+## [1.1.87] - 2026-07-22
+
+### Fixed
+- **多语言完整性**：整理相关 UI/错误/探测文案覆盖全部 12 种语言；去掉中文硬编码回退；AI 方案与实时建议语言跟随「应用语言 / 系统语言」；服务商名称按所选语言显示；补齐 diff/会话/向导等遗留英文串。Mac：仅同步版本号，无功能对齐项。
+
+## [1.1.86] - 2026-07-22
+
+### Changed
+- **AI 服务商验证**：对全部预设端点做了可达性探测（DeepSeek/通义/智谱/Kimi/硅基/火山/百川/MiniMax/OpenAI/Claude/Gemini/OpenRouter/OpenCode/Groq/Mistral/Together 均可达并进入鉴权门）；补齐 Anthropic `max_tokens` / Gemini `x-goog-api-key` / OpenRouter Referer；更新 Claude 与 OpenCode 模型列表。
+
+
+## [1.1.85] - 2026-07-22
+
+### Changed
+- **文案**：Tab / 页面 / 设置标题统一为「标签智能整理」，去掉重复双标题。
+
+
+## [1.1.84] - 2026-07-22
+
+### Fixed
+- **OpenCode Go 连通性**：最小请求体（user-only + stream:false）、探测时轮询备用模型、先验 /models；错误文案明确为服务商上游故障并建议改用 Zen 免费模型或直连。
+
+
+## [1.1.83] - 2026-07-22
+
+### Changed
+- **文案**：将「智能整理」统一改为「整理」（Tab / 主按钮 / 标题）。
+
+
+## [1.1.82] - 2026-07-22
+
+### Fixed
+- **OpenCode Go/Zen**：连通性测试与调用不再发送 temperature（避免 Console Go Upstream request failed）；模型 id 去掉 provider 前缀；错误提示更明确；Zen 默认推荐免费模型。
+
+
+## [1.1.81] - 2026-07-22
+
+### Changed
+- **智能整理AI**：精品扩展级 UX 演进——统一命名、三步流程、空态引导、应用下沉与成功态、周建议可操作、筛选/应用分层、历史建议可采纳。
+
+
+## [1.1.80] - 2026-07-22
+
+### Fixed
+- **测试 AI 连通性**：结果改在 AI 设置区显示；使用当前表单配置；在设置页请求主机权限；正确处理失败返回。
+
+
+## [1.1.79] - 2026-07-22
+
+### Changed
+- **AI 服务商**：下拉列表不再区分「中国 / 通用」分组，改为统一列表。
+
+
+## [1.1.78] - 2026-07-22
+
+### Changed
+- **整理 / AI**：去掉「仅本地规则」选项与「关闭（仅本地规则）」服务商；有模型则走 AI，未配置时仍自动回退本地引擎。
+
+## [1.1.77] - 2026-07-22
+
+### Added
+- **兼容 OpenCode**：新增 OpenCode Zen / Go 预设（https://opencode.ai/zen/v1）；支持导入本机 opencode.json 自动填充服务商、Base URL 与模型。
+
+## [1.1.76] - 2026-07-22
+
+### Changed
+- **AI 模型设置**：扩充中国常用（DeepSeek / 通义 / 智谱 / Kimi / 硅基流动 / 豆包等）与通用（OpenAI / Claude / Gemini / OpenRouter / Groq 等）预设；支持自定义 OpenAI 兼容网关与任意模型名；切换服务商自动填入 Base URL 与推荐模型。
+
+## [1.1.75] - 2026-07-16
+
+### Changed
+- **文件夹对照表**：方案预览先展示「旧文件夹 → 新文件夹」一一对照，可改新夹名、逐条/全部采纳；未采纳行不进入应用范围。
+
+## [1.1.74] - 2026-07-16
+
+### Changed
+- **方案预览可读性**：每条显示「原文件夹 → 新文件夹」；顶部汇总文件夹数前后对比与移动/归档/保留/待定数；明确归档不等于删除。
+
+## [1.1.73] - 2026-07-16
+
+### Fixed
+- **智能整理无反应**：未配置 API 时误走云端权限校验导致失败且 UI 未提示；现默认本地规则即可生成方案，并正确展示后台错误。
+
+
+## [1.1.72] - 2026-07-16
+
+### Changed
+- **整理 · 一键智能**：主路径改为「智能整理」——自动诊断并按健康度选保守/平衡/重构；诊断摘要展示已选方案；仅在有依据时提示「也可以」减负/场景；场景·项目·减负收到「更多」。
+
+## [1.1.71] - 2026-07-16
+
+### Changed
+- **整理 · 目标向导**：去掉含糊的模式下拉，改为「你想做什么？」四选一（优化目录 / 按场景 / 按项目 / 减负归档），每项一行说明；切换目标会清空旧方案。场景/项目/减负在本地规则与 LLM 提示中差异更明确。
+
+## [1.1.70] - 2026-07-16
+
+### Changed
+- **整理 · 新增建议 UI**：顶部结构化卡片（标题/URL/当前·建议路径/标签），支持采纳移动、忽略、清空；保留最近 12 条历史并可折叠查看。
+
+## [1.1.69] - 2026-07-16
+
+### Changed
+- **菜单树图标**：设置页外观为「菜单树」时，左侧导航显示与标签一致的图标。
+- **整理页 · AI书签顾问**：统一命名；方案预览改为多行卡片，动作/目标文件夹/标题/URL 一眼看全；精简文案与交互。
+- **通用 · 智能整理AI**：设置标题改为「智能整理AI」；新增「新增书签时给出归档建议」（目标夹 / 子夹 / 臃肿 / 合并拆分 / 重复相似），写入整理页并可通知。
+
+## [1.1.68] - 2026-07-16
+
+### Added
+- **书签 IA 架构顾问**：整理页「智能分析」升级为 Information Architecture 诊断——多维评分（命名/分类/层级/重复/可维护/可发现/扩展）、万能目录与认知模型混乱检测，并固定输出**保守 / 平衡（推荐）/ 重构**三套可预览方案；默认不直接改库，确认后再应用。
+  - 扩展：`aiOrganizeLibrary.ts`、`aiOrganizeIaSchemes.ts`、Organize 评分卡与方案卡。
+  - **Mac 无需对齐**。
+  - 后续：新增书签时的持续 IA 建议（放哪 / 是否新建 / 是否臃肿）将在后续版本接入。
+
+## [1.1.67] - 2026-07-15
+
+### Added
+- **书签整理 · 智能分析（推荐）**：对标 Raindrop Stella 等能力——先诊断现有文件夹（空夹、近名夹、过深、主题混杂、根目录散落），再结合全部书签生成可预览归类方案；健康库优先复用现有目录名，问题库在保留熟悉命名的前提下建议浅层重组。本地规则可离线运行；配置 LLM 时把文件夹清单与诊断一并送入模型。
+  - 扩展：`aiOrganizeLibrary.ts`、模式 `library`、Organize 面板诊断卡。
+  - **Mac 无需对齐**（平台独有 AI 整理）。
+
+## [1.1.66] - 2026-07-15
+
+### Fixed
+- **经典设置页 CSP 报错**：移除 `options.html` 内联脚本，改为打包模块在 React 渲染前添加 `options-embedded` 类，符合 MV3 `script-src 'self'`。
+
+## [1.1.65] - 2026-07-15
+
+### Changed
+- **打开方式立即生效**：切换经典 / 标签 / 弹窗后立刻同步工具栏行为并按新方式打开（无需重载扩展）。
+
+## [1.1.64] - 2026-07-15
+
+### Fixed
+- **经典模式设置窗过小**：同窗切换到设置时固定为与图标浮窗相同的 540×520–580，避免 Chrome 按内容把窗缩得很小。
+
+## [1.1.63] - 2026-07-15
+
+### Changed
+- **经典模式 · 设置同窗切换**：点击扩展图标打开浮窗后，再点设置/展开，在当前窗口内打开并切换到设置页，不再另开浏览器标签页。
+
+## [1.1.62] - 2026-07-15
+
+### Changed
+- **打开方式文案**：选项「经典（1.1.47）」改为「经典」。
+
+## [1.1.61] - 2026-07-15
+
+### Changed
+- **打开方式默认恢复 1.1.47 经典体验**：新增「经典」选项并作为默认——工具栏图标用轻量浮窗（`popup.html`），设置用浏览器标签页；外观默认「标签」，窗口大小记为「紧凑」（仅弹窗模式生效）。下拉顺序：经典 / 标签 / 弹窗。已保存为标签或弹窗的用户不受影响。
+  - 扩展：`uiOpenMode: classic | tab | popup`、`syncToolbarActionPopup`、`classicUiPreset`。
+  - **Mac 无需对齐**（平台独有 UI）。
+
+## [1.1.60] - 2026-07-15
+
+### Fixed
+- **图标窗与设置窗大小不一致**：工具栏图标改为打开同一 `options.html` 壳（`?tab=home`），与设置共用同一弹窗尺寸与靠右位置，不再使用独立 `popup.html` 导致宽高观感不同。
+
+## [1.1.59] - 2026-07-15
+
+### Fixed
+- **同步窗与设置窗尺寸不一致**：弹窗模式共用同一个窗口；图标 ↔ 设置切换时只换页面并套用同一偏好尺寸/靠右位置，不再新开第二个不同大小的窗。
+
+## [1.1.58] - 2026-07-15
+
+### Fixed
+- **快照列表「合并前」串语言**：标签在渲染时按当前语言解析，避免列表加载早于语言覆盖时冻住中文。
+- **图标弹窗与设置弹窗位置统一**：弹窗模式一律靠当前主浏览器窗口右侧（以 normal 窗为准，避免以旧弹窗为参照）。
+
+## [1.1.57] - 2026-07-15
+
+### Changed
+- **工具栏同步窗靠右**：弹窗模式下点击扩展图标打开的窗口，贴靠当前浏览器窗口右侧（多显示器按最后聚焦窗定位）。
+
+## [1.1.56] - 2026-07-15
+
+### Fixed
+- **备份/快照列表语言串中文**：配置备份与书签快照不再永久写入当时翻译文案；显示时按当前界面语言解析（含旧数据「安装/更新时自动备份」「合并前」等）。
+
+## [1.1.55] - 2026-07-15
+
+### Fixed
+- **界面语言覆盖串中文**：手动选英文等语言时，缺失文案不再回落到浏览器语言（常为中文），改为英文兜底；切换语言时清除「已切换为…」残留提示。
+
+## [1.1.54] - 2026-07-15
+
+### Changed
+- **通用文案**：设置页外观 →「标签 / 菜单树」；打开方式 →「标签 / 弹窗」。
+
+## [1.1.53] - 2026-07-15
+
+### Added
+- **通用 · 打开方式**：可选「独立弹窗」或「浏览器标签页」；作用于工具栏图标与设置入口。标签页模式下窗口大小选项禁用。
+  - 扩展：`uiOpenMode`、`openSettingsWindow` / `openHomeWindow`。
+  - **Mac 无需对齐**。
+
+## [1.1.52] - 2026-07-15
+
+### Fixed
+- **默认窗口大小对图标/设置生效**：去掉 `action.default_popup`（WXT 会自动注入，需在 manifest hook 剥离），工具栏图标走 `action.onClicked` → 按偏好尺寸开独立同步窗；齿轮设置开独立设置窗。
+  - **Mac 无需对齐**。
+
+## [1.1.51] - 2026-07-15
+
+### Fixed
+- **工具栏图标 / 设置改为独立窗路径**（1.1.52 才真正去掉 default_popup）。
+
+## [1.1.50] - 2026-07-15
+
+### Fixed
+- **设置窗口尺寸入口统一**：首次安装、后台「打开设置」、同步首页兜底、弹窗展开、选项页改尺寸等路径均走 `openSettingsWindow`（按所选尺寸打开/缩放独立窗）；选项页在 popup 内加载时也会应用首选尺寸。浏览器标签页打开设置时无法改窗尺寸（平台限制）。
+- **通用外观即时生效**（延续 1.1.49）：本地 state 驱动导航；侧栏为左侧文字菜单。
+
+## [1.1.49] - 2026-07-15
+
+### Added
+- **通用外观**：可在「标签 / 左侧菜单树」间切换设置页导航（侧栏参考沉浸式翻译式布局）；切换即时生效。
+- **默认窗口大小**：弹窗展开独立窗口时可选 紧凑 / 舒适(推荐 760×720) / 宽屏(侧栏最佳) / 大屏。
+  - 扩展：`uiPreferences`、`options.tsx` / `options.css`、`popup.tsx`、i18n。
+  - **Mac 无需对齐**。
+
+## [1.1.48] - 2026-07-15
+
+### Added
+- **智能整理（MVP→v3）**：选项新增主导航 **「整理」**；通用设置接入 OpenAI 兼容 / Anthropic / Gemini / Ollama 等 API。
+  - **MVP**：本地域名聚类 +（可选）大模型 JSON 方案；差异预览勾选；应用前自动本地快照；只移动/建夹/重命名/归档，不删。
+  - **v2**：重复链接提示并入待裁决；不确定队列筛选；每周减负建议（本地告警 + 通知）。
+  - **v3**：对比紧凑（本地）与详细（AI）双方案；Ollama/本地规则离线可用；可配置 taxonomy。
+  - 扩展：`aiOrganize*.ts`、`OrganizePanel.tsx`、`featureHandlers`、`background`、i18n。
+  - **Mac 无需对齐**（整理/LLM 为扩展 Tools 类能力）。
 
 ## [1.1.47] - 2026-07-14
 
@@ -494,6 +771,37 @@ All notable changes to BookmarkSync are documented here.
 - 扩展图标叹号悬停提示：本地书签已变更、等待自动同步。
 
 ## [Unreleased]
+
+## [1.1.78] - 2026-07-22
+
+### Changed
+- **整理 / AI**：去掉「仅本地规则」选项与「关闭（仅本地规则）」服务商；有模型则走 AI，未配置时仍自动回退本地引擎。
+
+## [1.1.77] - 2026-07-22
+
+### Added
+- **兼容 OpenCode**：新增 OpenCode Zen / Go 预设（https://opencode.ai/zen/v1）；支持导入本机 opencode.json 自动填充服务商、Base URL 与模型。
+
+## [1.1.76] - 2026-07-22
+
+### Changed
+- **AI 模型设置**：扩充中国常用（DeepSeek / 通义 / 智谱 / Kimi / 硅基流动 / 豆包等）与通用（OpenAI / Claude / Gemini / OpenRouter / Groq 等）预设；支持自定义 OpenAI 兼容网关与任意模型名；切换服务商自动填入 Base URL 与推荐模型。
+
+## [1.1.75] - 2026-07-16
+
+### Changed
+- **文件夹对照表**：方案预览先展示「旧文件夹 → 新文件夹」一一对照，可改新夹名、逐条/全部采纳；未采纳行不进入应用范围。
+
+## [1.1.74] - 2026-07-16
+
+### Changed
+- **方案预览可读性**：每条显示「原文件夹 → 新文件夹」；顶部汇总文件夹数前后对比与移动/归档/保留/待定数；明确归档不等于删除。
+
+## [1.1.73] - 2026-07-16
+
+### Fixed
+- **智能整理无反应**：未配置 API 时误走云端权限校验导致失败且 UI 未提示；现默认本地规则即可生成方案，并正确展示后台错误。
+
 
 Chrome Web Store resubmission after **Code Readability** rejection (obfuscated JS in store ZIP).
 

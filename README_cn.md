@@ -1,26 +1,29 @@
-# BookmarkSync
+# Bookmarkora
+
+> 原名 **BookmarkSync**。远程默认同步文件仍为 `BookmarkSync.json`（兼容已有仓库）。
 
 **跨浏览器书签云同步** — 在 Chrome、Firefox、Edge、Safari 之间同步书签，远程存储由**你自己**掌控。
 
-当前版本：**1.1.47**
+当前版本：**1.1.96**
 
 [English](README.md)
 
 ---
 
-## v1.1.47 更新说明
+## v1.1.96 更新说明
 
 ```
-v1.1.47
+v1.1.96
 
-修复：Chrome 安装包不再包含 Firefox 专用字段 browser_specific_settings（导致手机 Chromium 旁加载报损坏）
+新增：品牌更名为 Bookmarkora（扩展 ID 不变；同步设置与远程文件名兼容，无需重配）
+改进：「整理」先规划再应用（力度/把握度可调）；通用设置中为「智能整理(实验)」
 ```
 
 ---
 
-## BookmarkSync 是什么？
+## Bookmarkora 是什么？
 
-BookmarkSync 把浏览器书签备份、同步到**你自己的**远程存储。数据**不经过** BookmarkSync 开发者服务器，只保存在本机或你配置的账号里。
+Bookmarkora 把浏览器书签备份、同步到**你自己的**远程存储。数据**不经过** Bookmarkora 开发者服务器，只保存在本机或你配置的账号里。
 
 **支持的远程存储**
 
@@ -50,24 +53,24 @@ BookmarkSync 把浏览器书签备份、同步到**你自己的**远程存储。
 
 ### 浏览器扩展
 
-1. 从浏览器扩展商店安装 **BookmarkSync**：  
-   - [Chrome 网上应用店 — BookmarkSync](https://chromewebstore.google.com/detail/mdilbiflbhofoeokchmohbkdbobbegab?hl=zh-CN)（Edge 也可安装 Chrome 扩展）  
-   - [Firefox 附加组件 — BookmarkSync](https://addons.mozilla.org/zh-CN/firefox/addon/bookmarksync-cloud-sync/)  
+1. 从浏览器扩展商店安装 **Bookmarkora**：  
+   - [Chrome 网上应用店 — Bookmarkora](https://chromewebstore.google.com/detail/mdilbiflbhofoeokchmohbkdbobbegab?hl=zh-CN)（Edge 也可安装 Chrome 扩展）  
+   - [Firefox 附加组件 — Bookmarkora](https://addons.mozilla.org/zh-CN/firefox/addon/bookmarksync-cloud-sync/)  
 2. 将扩展图标固定到工具栏，方便打开。  
 3. 点击图标 → **设置**（齿轮）→ 配置远程存储。
 
 ### macOS 应用（Safari）
 
-1. 从发布页下载 **BookmarkSync.app**（或复制到「应用程序」文件夹）。  
+1. 从发布页下载 **Bookmarkora.app**（或复制到「应用程序」文件夹）。  
 2. 打开应用。  
 3. 按提示授予**完全磁盘访问权限**，以便读取 Safari 书签：  
-   **系统设置 → 隐私与安全性 → 完全磁盘访问 → 添加 BookmarkSync**  
+   **系统设置 → 隐私与安全性 → 完全磁盘访问 → 添加 Bookmarkora**  
    也可在应用内使用「选择书签文件」手动指定 `Bookmarks.plist`。  
 4. 若与浏览器扩展一起使用，请配置**相同**的远程存储。
 
 ### Safari 扩展（可选）
 
-若提供 Safari 版本，安装配套 Mac 应用后，在 **Safari → 设置 → 扩展** 中启用 BookmarkSync。
+若提供 Safari 版本，安装配套 Mac 应用后，在 **Safari → 设置 → 扩展** 中启用 Bookmarkora。
 
 ---
 
@@ -89,7 +92,7 @@ BookmarkSync 把浏览器书签备份、同步到**你自己的**远程存储。
 
 1. 创建 [Personal Access Token](https://github.com/settings/tokens/new)，勾选 **gist** 权限。  
 2. 新建 [Gist](https://gist.github.com/)，从 URL 中复制 Gist ID。  
-3. 在 BookmarkSync 设置中填写：  
+3. 在 Bookmarkora 设置中填写：  
    - **GitHub Token** — 粘贴 Token  
    - **Gist ID** — 粘贴 ID  
    - **文件名** — 默认 `BookmarkSync`（需与 Gist 内文件名一致）  
@@ -98,7 +101,7 @@ BookmarkSync 把浏览器书签备份、同步到**你自己的**远程存储。
 ### 私有 Gitea
 
 1. 在 Gitea 上创建仓库，并生成具有仓库写入权限的 Token。  
-2. 在 BookmarkSync 设置中填写：  
+2. 在 Bookmarkora 设置中填写：  
    - **Gitea 地址** — 如 `https://gitea.example.com`  
    - **Token**、**所有者**、**仓库**、**分支**（默认 `main`）  
 3. 书签保存在仓库根目录的 `BookmarkSync.json`。  
@@ -107,7 +110,7 @@ BookmarkSync 把浏览器书签备份、同步到**你自己的**远程存储。
 ### WebDAV
 
 1. 在 WebDAV 服务上准备或创建一个目录。  
-2. 在 BookmarkSync 设置中填写：  
+2. 在 Bookmarkora 设置中填写：  
    - **WebDAV 目录地址** — 完整文件夹 URL，例如  
      `https://cloud.example.com/remote.php/dav/files/用户名/bookmarks/`  
    - **用户名**、**密码**（Basic 认证）  
@@ -163,7 +166,7 @@ Mac 应用提供与扩展相同的 Safari 书签操作：上传、下载、合�
 
 ## 快照与安全
 
-- 在**清空本地**、**清空远程**或大规模覆盖前，BookmarkSync 会尽量先创建**快照**。  
+- 在**清空本地**、**清空远程**或大规模覆盖前，Bookmarkora 会尽量先创建**快照**。  
 - 在 **设置 → 数据**（扩展）或 **数据** 标签（Mac 应用）中查看、恢复快照。  
 - **配置备份** 可恢复之前的连接设置。
 
@@ -172,13 +175,13 @@ Mac 应用提供与扩展相同的 Safari 书签操作：上传、下载、合�
 
 ## 下载安装包
 
-**Chrome：** 请从 [Chrome 网上应用店 — BookmarkSync](https://chromewebstore.google.com/detail/mdilbiflbhofoeokchmohbkdbobbegab?hl=zh-CN) 安装。
+**Chrome：** 请从 [Chrome 网上应用店 — Bookmarkora](https://chromewebstore.google.com/detail/mdilbiflbhofoeokchmohbkdbobbegab?hl=zh-CN) 安装。
 
-**Firefox：** 请从 [Firefox 附加组件 — BookmarkSync](https://addons.mozilla.org/zh-CN/firefox/addon/bookmarksync-cloud-sync/) 安装。
+**Firefox：** 请从 [Firefox 附加组件 — Bookmarkora](https://addons.mozilla.org/zh-CN/firefox/addon/bookmarksync-cloud-sync/) 安装。
 
-开发者模式或离线安装时，可从本仓库 [dist/](dist/) 获取最新安装包（当前 v1.1.47）：
+开发者模式或离线安装时，可从本仓库 [dist/](dist/) 获取最新安装包（当前 v1.1.96）：
 
-- [BookmarkSync-1.1.47-chrome.zip](dist/BookmarkSync-1.1.47-chrome.zip)
+- [Bookmarkora-1.1.96-chrome.zip](dist/Bookmarkora-1.1.96-chrome.zip)
 
 产品截图见 [screenshots/](screenshots/)（英文根目录、zh_CN/ 中文）。
 
@@ -186,7 +189,7 @@ Mac 应用提供与扩展相同的 Safari 书签操作：上传、下载、合�
 
 ## 隐私
 
-BookmarkSync 不运营同步服务器。书签与凭据仅保存在本机或你配置的 GitHub / Gitea / WebDAV / S3 中。
+Bookmarkora 不运营同步服务器。书签与凭据仅保存在本机或你配置的 GitHub / Gitea / WebDAV / S3 中。
 
 完整说明：[隐私政策](PRIVACY.md)
 
@@ -198,7 +201,7 @@ BookmarkSync 不运营同步服务器。书签与凭据仅保存在本机或你�
 可以。在 Chrome 扩展和 Mac 应用里配置**同一个** Gist / Gitea / WebDAV，在两边分别执行**合并**即可。
 
 **Token 安全吗？**  
-Token 和密码保存在浏览器同步存储或 Mac 本地设置中，不会发送给 BookmarkSync 开发者。可随时在 GitHub / Gitea / WebDAV 侧撤销或修改。
+Token 和密码保存在浏览器同步存储或 Mac 本地设置中，不会发送给 Bookmarkora 开发者。可随时在 GitHub / Gitea / WebDAV 侧撤销或修改。
 
 **下载和合并有什么区别？**  
 **合并**会综合本地与远程书签，更安全。**下载**会用远程书签**完全替换**本地。
