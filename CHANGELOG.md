@@ -4,6 +4,11 @@ All notable changes to Bookmarkora are documented here.
 
 ## [Unreleased]
 
+## [1.1.97] - 2026-07-26
+
+### Changed
+- **GitHub**: public repo renamed to [`gygy/Bookmarkora`](https://github.com/gygy/Bookmarkora); official site / privacy / release scripts updated. Local sync still uses `BookmarkSync.json` paths.
+
 ## [1.1.96] - 2026-07-26
 
 ### Fixed
