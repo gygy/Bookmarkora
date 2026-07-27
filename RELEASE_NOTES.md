@@ -1,4 +1,4 @@
-# Bookmarkora v1.1.97 — Release notes
+# Bookmarkora v1.1.99 — Release notes
 
 ## English
 

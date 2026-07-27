@@ -4,6 +4,16 @@ All notable changes to Bookmarkora are documented here.
 
 ## [Unreleased]
 
+## [1.1.99] - 2026-07-27
+
+### Changed
+- **Organize (extension)**: copy rewritten to professional/concise tone across all locales (less assistant/AI marketing voice); generation status shows a single line instead of rotating tips; Mac N/A
+
+## [1.1.98] - 2026-07-27
+
+### Fixed
+- **Organize (extension)**: classic/open-mode typography now uses the same `--ms-font` / `--ms-text-*` scale as other tabs (no rem mismatch / browser button fonts); Mac N/A
+
 ## [1.1.97] - 2026-07-26
 
 ### Changed
