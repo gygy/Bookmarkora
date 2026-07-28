@@ -4,6 +4,11 @@ All notable changes to Bookmarkora are documented here.
 
 ## [Unreleased]
 
+## [1.1.100] - 2026-07-28
+
+### Fixed
+- **Setup wizard (extension)**: completing Quick Start now sticks — form autosave no longer overwrites `setupCompleted`; already-configured installs skip the first-run wizard; Mac N/A
+
 ## [1.1.99] - 2026-07-27
 
 ### Changed

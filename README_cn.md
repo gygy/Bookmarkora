@@ -4,19 +4,18 @@
 
 **跨浏览器书签云同步** — 在 Chrome、Firefox、Edge、Safari 之间同步书签，远程存储由**你自己**掌控。
 
-当前版本：**1.1.99**
+当前版本：**1.1.100**
 
 [English](README.md)
 
 ---
 
-## v1.1.99 更新说明
+## v1.1.100 更新说明
 
 ```
-v1.1.96
+v1.1.100
 
-新增：品牌更名为 Bookmarkora（扩展 ID 不变；同步设置与远程文件名兼容，无需重配）
-改进：「整理」先规划再应用（力度/把握度可调）；通用设置中为「智能整理(实验)」
+修复：快速开始仅首次安装出现；完成后再次打开设置不会重复进入
 ```
 
 ---
@@ -179,9 +178,9 @@ Mac 应用提供与扩展相同的 Safari 书签操作：上传、下载、合�
 
 **Firefox：** 请从 [Firefox 附加组件 — Bookmarkora](https://addons.mozilla.org/zh-CN/firefox/addon/bookmarksync-cloud-sync/) 安装。
 
-开发者模式或离线安装时，可从本仓库 [dist/](dist/) 获取最新安装包（当前 v1.1.99）：
+开发者模式或离线安装时，可从本仓库 [dist/](dist/) 获取最新安装包（当前 v1.1.100）：
 
-- [Bookmarkora-1.1.99-chrome.zip](dist/Bookmarkora-1.1.99-chrome.zip)
+- [Bookmarkora-1.1.100-chrome.zip](dist/Bookmarkora-1.1.100-chrome.zip)
 
 产品截图见 [screenshots/](screenshots/)（英文根目录、zh_CN/ 中文）。
 

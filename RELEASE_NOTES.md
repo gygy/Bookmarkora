@@ -1,15 +1,13 @@
-# Bookmarkora v1.1.99 — Release notes
+# Bookmarkora v1.1.100 — Release notes
 
 ## English
 
-v1.1.96
+v1.1.100
 
-NEW: Renamed to Bookmarkora (same extension ID; your sync settings and remote files are unchanged)
-IMPROVED: Organize — plan-first flow with intensity & confidence controls; Smart Organize (Experimental) in General
+FIXED: Quick Start wizard only appears on first install — completing it no longer reopens on every Settings visit
 
 ## 中文
 
-v1.1.96
+v1.1.100
 
-新增：品牌更名为 Bookmarkora（扩展 ID 不变；同步设置与远程文件名兼容，无需重配）
-改进：「整理」先规划再应用（力度/把握度可调）；通用设置中为「智能整理(实验)」
+修复：快速开始仅首次安装出现；完成后再次打开设置不会重复进入
