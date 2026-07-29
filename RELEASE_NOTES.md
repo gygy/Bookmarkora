@@ -1,13 +1,15 @@
-# Bookmarkora v1.1.100 — Release notes
+# Bookmarkora v1.1.101 — Release notes
 
 ## English
 
-v1.1.100
+v1.1.101
 
-FIXED: Quick Start wizard only appears on first install — completing it no longer reopens on every Settings visit
+FIXED: Mobile merge no longer produces an empty plan that could wipe local bookmarks; safer root-folder recognition
+FIXED: Clearer error when merge collapses; sync phase labels localized
 
 ## 中文
 
-v1.1.100
+v1.1.101
 
-修复：快速开始仅首次安装出现；完成后再次打开设置不会重复进入
+修复：手机端合并不再产出空方案导致清空本地书签；增强根目录识别
+修复：空合并给出明确提示；同步阶段文案已本地化

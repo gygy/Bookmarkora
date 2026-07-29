@@ -4,6 +4,12 @@ All notable changes to Bookmarkora are documented here.
 
 ## [Unreleased]
 
+## [1.1.101] - 2026-07-29
+
+### Fixed
+- **Sync (extension)**: empty merge collapse when browser root folders are unrecognized (mobile Chromium) — always block applying an empty plan; improve root normalization via `folderType`, localized titles, and fallbacks; Mac N/A
+- **UI**: localize merge sync phase labels with provider suffixes; add `snapshotListTitle`
+
 ## [1.1.100] - 2026-07-28
 
 ### Fixed
