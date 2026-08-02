@@ -4,6 +4,45 @@ All notable changes to Bookmarkora are documented here.
 
 ## [Unreleased]
 
+## [1.1.107] - 2026-08-02
+
+### Added
+- **HTML sync backup (extension + Mac)**: each sync now keeps a dated Netscape file `BookmarkSync/_snapshots_html/bak-{id}.html` in addition to overwriting the latest `BookmarkSync.html`; retention follows the remote-snapshot max count / max age policy via `_html_sync_index.json`
+
+### Changed
+- **i18n**: full pass on remaining EN-identical UI strings across ja/ko/de/fr/es/it/pt/ru/ar/zh_TW (sameAsEn under ~5%)
+
+## [1.1.106] - 2026-08-02
+
+### Added
+- **Config backup (extension + Mac)**: also uploads one latest settings JSON to `BookmarkSync/_Bookmarkora_config/Bookmarkora-config.json` (folder name configurable; overwrite only); contains tokens — private remotes recommended
+
+### Changed
+- **Copy**: shortened remote backup-folder hint
+
+## [1.1.105] - 2026-08-02
+
+### Changed
+- **Copy (extension + Mac)**: backup-folder hints clarify product name Bookmarkora while stating the remote parent path remains `BookmarkSync/` for installed-user compatibility (no path migration)
+
+## [1.1.104] - 2026-08-02
+
+### Added
+- **Remote snapshots (extension + Mac)**: each remote snapshot now also writes a dated Netscape HTML twin under `BookmarkSync/_snapshots_html/{snapshotId}.html` (same id as the JSON file); pruned with retention policy
+
+## [1.1.103] - 2026-08-02
+
+### Added
+- **Backup policy (extension + Mac)**: configurable remote folders under `BookmarkSync/` — JSON snapshots (`remoteSnapshotFolder`, default `_snapshots`) and Netscape HTML backups (`remoteHtmlBackupFolder`, default `_snapshots_html`); invalid names fall back to defaults
+
+### Changed
+- **HTML remote backup**: writes to `BookmarkSync/_snapshots_html/<name>.html` instead of beside the main sync file (folder name configurable)
+
+## [1.1.102] - 2026-08-02
+
+### Changed
+- **Options (extension)**: embedded header shows both 「标签页」 (with icon) and Help/Support again; shortened open-in-tab label; Mac N/A
+
 ## [1.1.101] - 2026-07-29
 
 ### Fixed

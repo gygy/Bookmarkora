@@ -1,15 +1,15 @@
-# Bookmarkora v1.1.101 — Release notes
+# Bookmarkora v1.1.107 — Release notes
 
 ## English
 
-v1.1.101
+v1.1.107
 
-FIXED: Mobile merge no longer produces an empty plan that could wipe local bookmarks; safer root-folder recognition
-FIXED: Clearer error when merge collapses; sync phase labels localized
+NEW: Sync HTML backup keeps a dated bak-*.html under BookmarkSync/_snapshots_html/ (plus latest overwrite); retention matches remote snapshots
+IMPROVED: Full UI translation pass for ja/ko/de/fr/es/it/pt/ru/ar/zh_TW
 
 ## 中文
 
-v1.1.101
+v1.1.107
 
-修复：手机端合并不再产出空方案导致清空本地书签；增强根目录识别
-修复：空合并给出明确提示；同步阶段文案已本地化
+新增：同步 HTML 备份在 BookmarkSync/_snapshots_html/ 保留带日期的 bak-*.html（同时覆盖最新文件）；保留策略与远程快照一致
+改进：日/韩/德/法/西/意/葡/俄/阿/繁中等语言界面文案全量补译
