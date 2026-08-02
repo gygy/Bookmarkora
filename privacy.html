@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bookmarkora Privacy Policy</title>
+  <meta name="description" content="Privacy Policy for the Bookmarkora Microsoft Edge extension: how personal information is accessed, used, stored, and controlled by the user." />
+  <style>
+    :root { color-scheme: light; }
+    body {
+      margin: 0 auto;
+      max-width: 48rem;
+      padding: 2rem 1.25rem 4rem;
+      font: 16px/1.55 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      color: #1a1a1a;
+      background: #fff;
+    }
+    h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 0.5rem; }
+    h2 { font-size: 1.2rem; margin: 2rem 0 0.75rem; }
+    h3 { font-size: 1.05rem; margin: 1.25rem 0 0.5rem; }
+    p, li { margin: 0.5rem 0; }
+    table { border-collapse: collapse; width: 100%; margin: 0.75rem 0 1rem; font-size: 0.95rem; }
+    th, td { border: 1px solid #ccc; padding: 0.5rem 0.6rem; text-align: left; vertical-align: top; }
+    th { background: #f4f4f4; }
+    .meta { color: #555; margin-bottom: 1.5rem; }
+    hr { border: 0; border-top: 1px solid #ddd; margin: 2.5rem 0; }
+    a { color: #0b57d0; }
+  </style>
+</head>
+<body>
+  <h1>Bookmarkora Privacy Policy</h1>
+  <p class="meta"><strong>Last updated:</strong> August 2, 2026</p>
+
+  <p>
+    This privacy policy applies to the <strong>Bookmarkora</strong> browser extension available on
+    <strong>Microsoft Edge Add-ons</strong> (and the same product on other Chromium/Firefox stores),
+    plus the optional macOS companion app.
+  </p>
+  <p>
+    Bookmarkora helps you sync browser bookmarks with <strong>storage you control</strong>
+    (for example GitHub Gist, Gitee, GitLab, self-hosted Gitea, WebDAV, S3-compatible object storage,
+    Google Drive, or OneDrive). Optional end-to-end encryption keeps remote bookmark files encrypted;
+    the passphrase stays on your device and is never sent to the developer.
+  </p>
+
+  <h2>Summary</h2>
+  <ul>
+    <li>Bookmarkora <strong>does not operate developer-owned servers</strong> for sync, analytics, or advertising.</li>
+    <li>Bookmarks, credentials, tab sessions, and settings stay <strong>on your device</strong> and in <strong>storage you configure</strong>.</li>
+    <li>We do <strong>not</strong> sell, rent, or share your data with third parties for advertising or analytics.</li>
+    <li>The extension does <strong>not</strong> collect your general browsing history.</li>
+  </ul>
+
+  <h2>Personal information we access</h2>
+  <p>Bookmarkora may access or transmit the following information <strong>only</strong> to provide sync and Tools features you use:</p>
+  <table>
+    <thead>
+      <tr><th>Category</th><th>Examples</th><th>Where it stays / goes</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Website content</td>
+        <td>Bookmark URLs, titles, folder names</td>
+        <td>Your device; your configured remote</td>
+      </tr>
+      <tr>
+        <td>Authentication information</td>
+        <td>Tokens, passwords, API keys you enter</td>
+        <td>Device storage only; used to talk to <strong>your</strong> remote</td>
+      </tr>
+      <tr>
+        <td>Tab session data (optional)</td>
+        <td>Open tab URLs/titles when you save a session</td>
+        <td>Device; optionally your remote if you sync sessions</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>We do <strong>not</strong> collect health, financial, location, or general web-history data.</p>
+
+  <h2>How data is used</h2>
+  <ul>
+    <li>Sync (upload / download / merge / auto-sync) reads and writes bookmarks as you configure.</li>
+    <li>Tools (duplicates, broken-link check, snapshots, hygiene, tab sessions) run on your device when you start them or enable schedules.</li>
+    <li>Broken-link checks may open background tabs to URLs <strong>already in your bookmarks</strong>; those requests go to the target sites, not to the developer.</li>
+  </ul>
+
+  <h2>Where data is sent</h2>
+  <p>When you sync, data is sent <strong>only</strong> to remotes <strong>you</strong> configure:</p>
+  <ul>
+    <li>GitHub / Gitee / GitLab / your Gitea instance</li>
+    <li>Your WebDAV server</li>
+    <li>Your S3-compatible endpoint and bucket</li>
+    <li>Google Drive or OneDrive (when you choose those providers and grant access)</li>
+  </ul>
+  <p>No bookmark, credential, or tab data is sent to Bookmarkora developers or any Bookmarkora intermediary service.</p>
+
+  <h2>User controls (access, sharing, opt-out)</h2>
+  <p>You control all processing:</p>
+  <ol>
+    <li><strong>Stop sync / Tools</strong> — turn off auto-sync and scheduled Tools, or do not use those features.</li>
+    <li><strong>Remove credentials</strong> — clear tokens/keys in Settings, or revoke them at the provider.</li>
+    <li><strong>Delete local data</strong> — uninstall the extension/app, or clear local snapshots/logs in Settings/Tools.</li>
+    <li><strong>Delete remote data</strong> — delete sync files on your remote, or use in-app clear/restore actions.</li>
+    <li><strong>Revoke host access</strong> — deny optional host permissions for remotes you no longer use.</li>
+  </ol>
+  <p>There is no developer-side account to request deletion from: we do not host your data.</p>
+
+  <h2>Permissions (browser extension)</h2>
+  <table>
+    <thead><tr><th>Permission</th><th>Purpose</th></tr></thead>
+    <tbody>
+      <tr><td><code>bookmarks</code></td><td>Sync and Tools that read/write bookmarks</td></tr>
+      <tr><td><code>storage</code></td><td>Local settings, credentials, snapshots, logs, sessions</td></tr>
+      <tr><td><code>alarms</code></td><td>Scheduled auto-sync / Tools when enabled</td></tr>
+      <tr><td><code>notifications</code></td><td>Optional sync success/failure alerts</td></tr>
+      <tr><td><code>tabs</code> / <code>windows</code> / <code>webNavigation</code></td><td>Tab sessions and broken-link checks you start—not browsing tracking</td></tr>
+      <tr><td>Host access</td><td>Only origins needed for remotes you configure</td></tr>
+    </tbody>
+  </table>
+
+  <h2>macOS companion app</h2>
+  <p>
+    With Full Disk Access (or a file you select), the macOS app may read Safari bookmarks and sync to the same class of remotes.
+    Data handling matches this policy.
+  </p>
+
+  <h2>Children</h2>
+  <p>Bookmarkora is not directed at children under 13. We do not knowingly collect personal information from children.</p>
+
+  <h2>Changes</h2>
+  <p>We may update this policy when the product changes. The “Last updated” date above reflects the latest revision.</p>
+
+  <h2>Contact</h2>
+  <p>
+    Privacy questions: open an issue at
+    <a href="https://github.com/gygy/Bookmarkora">github.com/gygy/Bookmarkora</a>,
+    or contact the publisher listed on the <strong>Microsoft Edge Add-ons</strong> product page for Bookmarkora
+    (also listed on Chrome Web Store / Firefox Add-ons where published).
+  </p>
+
+  <hr />
+
+  <h1 lang="zh-CN">Bookmarkora 隐私政策</h1>
+  <p class="meta" lang="zh-CN"><strong>最后更新：</strong>2026 年 8 月 2 日</p>
+  <p lang="zh-CN">
+    本政策适用于 <strong>Microsoft Edge 扩展商店</strong>上的 Bookmarkora 扩展（及其他浏览器商店中的同款产品），以及可选的 macOS 伴侣应用。
+    书签仅同步到您自行配置的远程存储；开发者不运营同步服务器，也不出售数据。您可通过关闭同步、清除凭据、卸载扩展或删除远程文件来控制与删除数据。
+    完整条款见上方英文正文。
+  </p>
+  <p lang="zh-CN">
+    联系：<a href="https://github.com/gygy/Bookmarkora">GitHub Issues</a>
+    或 Microsoft Edge 扩展商店产品页发布者信息。
+  </p>
+</body>
+</html>

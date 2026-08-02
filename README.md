@@ -4,19 +4,18 @@
 
 **Cross-browser bookmark sync** — keep bookmarks in sync across Chrome, Firefox, Edge, and Safari using storage **you** control.
 
-Version **1.1.107**
+Version **1.1.108**
 
 [简体中文](README_cn.md)
 
 ---
 
-## What's new in v1.1.107
+## What's new in v1.1.108
 
 ```
-v1.1.107
+v1.1.108
 
-NEW: Sync HTML backup keeps a dated bak-*.html under BookmarkSync/_snapshots_html/ (plus latest overwrite); retention matches remote snapshots
-IMPROVED: Full UI translation pass for ja/ko/de/fr/es/it/pt/ru/ar/zh_TW
+FIXED: Privacy policy updated for Microsoft Edge Add-ons (clear personal-information disclosure and user controls; HTML policy URL)
 ```
 
 ---
@@ -32,7 +31,7 @@ Bookmarkora backs up and syncs your browser bookmarks to **your own** remote sto
 - **WebDAV** — Nextcloud, Synology NAS, or any WebDAV folder  
 - **S3-compatible** — AWS S3, Cloudflare R2, MinIO  
 
-**Extension highlights (v1.1.107)**
+**Extension highlights (v1.1.108)**
 
 - **Tools hub** — health panel, duplicates, broken links, snapshots, merge preview, version history, tab sessions  
 - Optional **end-to-end encryption** for remote bookmark files  
@@ -179,9 +178,9 @@ The Mac app offers the same sync actions for **Safari** bookmarks: upload, downl
 
 **Firefox:** Install from [Firefox Add-ons — Bookmarkora](https://addons.mozilla.org/firefox/addon/bookmarksync-cloud-sync/).
 
-For manual load (developer mode), get the latest packages (v1.1.107) from [dist/](dist/):
+For manual load (developer mode), get the latest packages (v1.1.108) from [dist/](dist/):
 
-- [Bookmarkora-1.1.107-chrome.zip](dist/Bookmarkora-1.1.107-chrome.zip)
+- [Bookmarkora-1.1.108-chrome.zip](dist/Bookmarkora-1.1.108-chrome.zip)
 
 Product screenshots: [screenshots/](screenshots/) (English at root, zh_CN/ for Chinese).
 

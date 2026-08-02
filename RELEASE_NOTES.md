@@ -1,15 +1,13 @@
-# Bookmarkora v1.1.107 — Release notes
+# Bookmarkora v1.1.108 — Release notes
 
 ## English
 
-v1.1.107
+v1.1.108
 
-NEW: Sync HTML backup keeps a dated bak-*.html under BookmarkSync/_snapshots_html/ (plus latest overwrite); retention matches remote snapshots
-IMPROVED: Full UI translation pass for ja/ko/de/fr/es/it/pt/ru/ar/zh_TW
+FIXED: Privacy policy updated for Microsoft Edge Add-ons (clear personal-information disclosure and user controls; HTML policy URL)
 
 ## 中文
 
-v1.1.107
+v1.1.108
 
-新增：同步 HTML 备份在 BookmarkSync/_snapshots_html/ 保留带日期的 bak-*.html（同时覆盖最新文件）；保留策略与远程快照一致
-改进：日/韩/德/法/西/意/葡/俄/阿/繁中等语言界面文案全量补译
+修复：按 Edge 商店 1.5.2 更新隐私政策（明确个人信息披露与用户控制；提供可抓取 HTML 政策页）

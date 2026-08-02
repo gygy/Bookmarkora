@@ -1,187 +1,123 @@
 # Bookmarkora Privacy Policy
 
-**Last updated:** June 22, 2026
+**Last updated:** August 2, 2026
 
-Bookmarkora ("the Extension" or "the App") helps you sync browser bookmarks with storage you control: **GitHub Gist**, your own **Gitea** server, a **WebDAV** folder, or **S3-compatible** object storage. Optional **end-to-end encryption** keeps remote bookmark files encrypted; the passphrase stays in your browser session (extension) or in app memory (macOS) and is never sent to developers.
+This privacy policy applies to the **Bookmarkora** browser extension available on **Microsoft Edge Add-ons** (and the same product on other Chromium/Firefox stores), plus the optional macOS companion app.
 
-Optional **Tools** features (duplicate cleanup, broken-link check, snapshots, named **tab sessions**, and related utilities) run on your device. They use bookmark or tab data only when **you** open Tools and start an action—or when you enable scheduled tool scans.
+Bookmarkora helps you sync browser bookmarks with **storage you control** (for example GitHub Gist, Gitee, GitLab, self-hosted Gitea, WebDAV, S3-compatible object storage, Google Drive, or OneDrive). Optional end-to-end encryption keeps remote bookmark files encrypted; the passphrase stays on your device and is never sent to the developer.
 
 ## Summary
 
-- Bookmarkora **does not operate developer-owned servers** for sync or analytics.
-- Your bookmarks, credentials, tab sessions, and settings stay **on your device** and in **storage you configure**.
+- Bookmarkora **does not operate developer-owned servers** for sync, analytics, or advertising.
+- Bookmarks, credentials, tab sessions, and settings stay **on your device** and in **storage you configure**.
 - We do **not** sell, rent, or share your data with third parties for advertising or analytics.
-- The Extension does **not** collect your general browsing history. `tabs` / `webNavigation` are used only for Tools you explicitly use (e.g. tab sessions, broken-link check), not for background tracking.
+- The extension does **not** collect your general browsing history.
 
-## Data the Extension Handles
+## Personal information we access
 
-### Browser bookmarks
+Bookmarkora may access or transmit the following information **only** to provide sync and Tools features you use:
 
-The Extension (or macOS App) reads and modifies bookmarks to upload, download, merge, restore, deduplicate, or remove them when **you** trigger those actions, use Tools, or when auto-sync is enabled.
+| Category | Examples | Where it stays / goes |
+|----------|----------|------------------------|
+| Website content | Bookmark URLs, titles, folder names | Your device; your configured remote |
+| Authentication information | Tokens, passwords, API keys you enter | Device storage only; used to talk to **your** remote |
+| Tab session data (optional) | Open tab URLs/titles when you save a session | Device; optionally your remote if you sync sessions |
 
-### Tab sessions (browser extension only)
+We do **not** collect health, financial, location, or general web-history data.
 
-When you use **Tab Session** features in Tools, the Extension may read open tab URLs and titles in the current window to save a named session locally and optionally sync session JSON to your configured remote storage. Sessions are not collected in the background without your action.
+## How data is used
 
-### Sync configuration
+- Sync (upload / download / merge / auto-sync) reads and writes bookmarks as you configure.
+- Tools (duplicates, broken-link check, snapshots, hygiene, tab sessions) run on your device when you start them or enable schedules.
+- Broken-link checks may open background tabs to URLs **already in your bookmarks**; those requests go to the target sites, not to the developer.
 
-Settings such as sync provider (GitHub / Gitea / WebDAV / S3), Gist ID, Gitea URL, WebDAV folder URL, S3 endpoint and bucket settings, file names, auto-sync mode, sync scope, E2E encryption toggle, notification preferences, and tool schedules are stored locally (`chrome.storage.sync` / `chrome.storage.local`, macOS UserDefaults, or iCloud config backup if you enable it).
+## Where data is sent
 
-### Credentials
+When you sync, data is sent **only** to remotes **you** configure:
 
-If you provide credentials, they are stored on your device only:
+- GitHub / Gitee / GitLab / your Gitea instance  
+- Your WebDAV server  
+- Your S3-compatible endpoint and bucket  
+- Google Drive or OneDrive (when you choose those providers and grant access)
 
-- GitHub Personal Access Token  
-- Gitea access token  
-- WebDAV username and password (Basic authentication)  
-- S3 access key and secret key  
-- E2E encryption passphrase (session-only in the extension; in-memory on macOS when enabled)
+No bookmark, credential, or tab data is sent to Bookmarkora developers or any Bookmarkora intermediary service.
 
-These are used only to access **your** configured remote storage. They are **not** transmitted to Bookmarkora developers.
+## User controls (access, sharing, opt-out)
 
-### Local snapshots and logs
+You control all processing:
 
-Bookmark snapshots, configuration backups, sync logs, and tab session backups may be stored locally to support restore and troubleshooting. They are not uploaded unless **you** sync to your remote storage.
+1. **Stop sync / Tools** — turn off auto-sync and scheduled Tools, or do not use those features.  
+2. **Remove credentials** — clear tokens/keys in Settings, or revoke them at the provider (GitHub, Gitea, Google, Microsoft, etc.).  
+3. **Delete local data** — uninstall the extension/app (subject to browser/OS behavior), or clear local snapshots/logs in Settings/Tools.  
+4. **Delete remote data** — delete sync files on your remote, or use in-app clear/restore actions.  
+5. **Revoke host access** — deny optional host permissions for remotes you no longer use.
 
-## Where Data Is Sent
+There is no developer-side account to request deletion from: we do not host your data.
 
-When you sync, bookmark data, tab session files, and related JSON are sent only to:
-
-- **GitHub** (`github.com`, `githubusercontent.com`) — when you configure GitHub Gist sync  
-- **Your Gitea server** — only the origin you configure; the browser extension requests host permission at runtime  
-- **Your WebDAV server** — only the origin/folder URL you configure; the browser extension requests host permission at runtime  
-- **Your S3-compatible endpoint** — only the endpoint and bucket you configure; the browser extension requests host permission at runtime when needed  
-
-Broken-link checks initiated in Tools may cause the Extension to open **background tabs** to URLs already present in **your bookmarks**. Those requests go directly to the target websites—not to Bookmarkora developers.
-
-No bookmark, credential, or tab data is sent to the Bookmarkora author or any intermediary service operated for Bookmarkora.
-
-## Permissions (Browser Extension)
+## Permissions (browser extension)
 
 | Permission | Purpose |
 |------------|---------|
-| `bookmarks` | Read/write bookmarks for sync and Tools (cleanup, import/export, link check on bookmark URLs, etc.) |
-| `storage` | Save settings, credentials, snapshots, sync logs, config backups, and tab session data locally |
-| `alarms` | Run scheduled auto-sync and optional periodic tool scans when you enable them |
-| `notifications` | Optional sync success/failure notifications |
-| `tabs` | Save/restore tab sessions; open background tabs when you run **Broken Link Check** on bookmark URLs |
-| `windows` | Restore saved tab sessions into browser windows when you choose Restore in Tools |
-| `webNavigation` | Detect navigation errors during user-initiated broken-link checks and tab session operations—not for browsing history tracking |
-| GitHub host access (`github.com`, `githubusercontent.com`) | Access your configured Gist |
-| Optional `*://*/*` | Requested at runtime when you configure a **Gitea**, **WebDAV**, or **S3** URL and click Test Connection or sync—limited to origins you specify |
+| `bookmarks` | Sync and Tools that read/write bookmarks |
+| `storage` | Local settings, credentials, snapshots, logs, sessions |
+| `alarms` | Scheduled auto-sync / Tools when enabled |
+| `notifications` | Optional sync success/failure alerts |
+| `tabs` / `windows` / `webNavigation` | Tab sessions and broken-link checks you start—not browsing tracking |
+| Host access | Only origins needed for remotes you configure (GitHub fixed hosts; others requested at runtime) |
 
-## macOS App
+## macOS companion app
 
-The macOS companion app reads Safari bookmarks via `Bookmarks.plist` when you grant **Full Disk Access** or select the bookmarks file. Synced data goes only to remotes you configure (GitHub / Gitea / WebDAV / S3), same as the browser extension.
-
-## Data Retention and Deletion
-
-- **Uninstall the extension or app** — removes locally stored data (subject to OS/browser behavior).  
-- **Clear remote data** — use in-app actions or delete files on GitHub / Gitea / WebDAV / S3 directly.  
-- **Revoke credentials** — delete or rotate tokens, keys, or passwords on GitHub, Gitea, WebDAV, or S3 at any time.
+With Full Disk Access (or a file you select), the macOS app may read Safari bookmarks and sync to the same class of remotes. Data handling matches this policy.
 
 ## Children
 
-Bookmarkora is not directed at children under 13, and we do not knowingly collect personal information from children.
+Bookmarkora is not directed at children under 13. We do not knowingly collect personal information from children.
 
 ## Changes
 
-We may update this policy when the product changes. The "Last updated" date at the top will reflect the latest revision.
+We may update this policy when the product changes. The “Last updated” date above reflects the latest revision.
 
 ## Contact
 
-For privacy questions, open an issue in the project repository or contact the publisher listed on the Chrome Web Store / Firefox Add-ons listing.
+Privacy questions: open an issue at [github.com/gygy/Bookmarkora](https://github.com/gygy/Bookmarkora), or contact the publisher listed on the **Microsoft Edge Add-ons** product page for Bookmarkora (also listed on Chrome Web Store / Firefox Add-ons where published).
 
 ---
 
 # Bookmarkora 隐私政策（中文）
 
-**最后更新：** 2026 年 6 月 22 日
+**最后更新：** 2026 年 8 月 2 日
 
-Bookmarkora（「本扩展」或「本应用」）帮助您将浏览器书签同步到您自行控制的存储：**GitHub Gist**、**私有 Gitea**、**WebDAV 目录**或 **S3 兼容**对象存储。可选 **端到端加密** 用于保护远程书签文件；加密口令保存在浏览器会话（扩展）或应用内存（macOS）中，**不会**发送给开发者。
+本政策适用于 **Microsoft Edge 扩展商店**上的 Bookmarkora 扩展（及其他浏览器商店中的同款产品），以及可选的 macOS 伴侣应用。
 
-可选 **工具中心** 功能（重复书签清理、死链检测、快照、**标签页会话**等）均在您的设备上运行，仅在 **您** 打开工具并执行操作时—or 在您启用定时工具扫描时—使用相关书签或标签页数据。
+Bookmarkora 将书签同步到 **您自行配置** 的远程存储（如 GitHub Gist、Gitee、GitLab、自建 Gitea、WebDAV、S3 兼容存储、Google Drive、OneDrive）。可选端到端加密口令仅保存在您的设备上，不会发送给开发者。
 
 ## 概要
 
-- 书签同步与工具功能**不经过开发者服务器**，也不用于广告或分析追踪。
-- 书签、凭据、标签页会话与设置保存在 **您的设备** 及 **您配置的远程存储** 中。
-- **不会**为广告或分析目的出售、出租或共享您的数据。
-- 本扩展 **不收集** 您的日常浏览历史。`tabs` / `webNavigation` 仅用于您主动使用的工具（如标签页会话、死链检测），不作后台追踪。
+- **没有**开发者运营的同步/分析/广告服务器。  
+- 书签、凭据、会话与设置保存在 **本机** 与 **您配置的远程**。  
+- **不**出售或出租数据。  
+- **不**收集日常浏览历史。
 
-## 处理的数据
+## 可能访问的个人信息
 
-### 浏览器书签
+| 类别 | 示例 | 去向 |
+|------|------|------|
+| 网站内容 | 书签 URL、标题、文件夹名 | 本机；您的远程 |
+| 身份验证信息 | 您输入的 Token/密码/密钥 | 仅本机；用于访问您的远程 |
+| 标签页会话（可选） | 您保存会话时的标签 URL/标题 | 本机；若同步会话则可到您的远程 |
 
-仅在您手动操作、使用工具中心，或开启自动同步时，读取或修改书签（上传、下载、合并、恢复、去重、清空等）。
+不收集健康、财务、位置或一般网页历史。
 
-### 标签页会话（仅浏览器扩展）
+## 用户控制（访问、共享与退出）
 
-使用工具中心的 **标签页会话** 时，扩展可能读取当前窗口中可保存标签页的 URL 与标题，在本地保存命名会话，并可选择将会话 JSON 同步到您配置的远程存储。不会在未经您操作的情况下后台收集标签页。
+1. 关闭自动同步与定时工具，或不使用相关功能。  
+2. 在设置中清除凭据，或在各服务商处撤销授权。  
+3. 卸载扩展/应用，或清理本地快照与日志。  
+4. 在远程存储删除同步文件，或使用应用内清空/恢复。  
+5. 拒绝不再使用的远程主机权限。
 
-### 同步配置
-
-同步方式（GitHub / Gitea / WebDAV / S3）、Gist ID、Gitea 地址、WebDAV 目录、S3 端点与存储桶、文件名、自动同步模式、同步范围、端到端加密开关、通知与工具定时任务等，保存在浏览器扩展存储、macOS 本地设置，或您开启的 iCloud 配置备份中。
-
-### 凭据
-
-以下凭据 **仅保存在本机**，用于访问您配置的远程存储，**不会**发送给 Bookmarkora 开发者：
-
-- GitHub Personal Access Token  
-- Gitea Token  
-- WebDAV 用户名与密码（Basic 认证）  
-- S3 Access Key 与 Secret Key  
-- 端到端加密口令（扩展为会话级；macOS 启用时仅在内存中）
-
-### 本地快照与日志
-
-可能在本地保存书签快照、配置备份、同步日志与标签页会话备份，用于恢复与排查；除非您主动同步，否则不会上传至第三方。
-
-## 数据去向
-
-同步时，书签数据、标签页会话文件及相关 JSON 仅发送至：
-
-- **GitHub**（`github.com`、`githubusercontent.com`）— 配置 Gist 同步时  
-- **您指定的 Gitea 服务器** — 扩展在运行时按您配置的域名申请主机权限  
-- **您指定的 WebDAV 服务器** — 扩展在运行时按您配置的地址申请主机权限  
-- **您指定的 S3 兼容端点** — 仅访问您配置的端点与存储桶；需要时由扩展在运行时申请主机权限  
-
-在工具中心发起 **死链检测** 时，扩展可能对 **书签中已有的 URL** 打开后台标签页进行检测；请求直接发往目标网站，**不经过** Bookmarkora 开发者。
-
-不向 Bookmarkora 作者或任何中间服务传输书签、凭据或标签页数据。
-
-## 权限说明（浏览器扩展）
-
-| 权限 | 用途 |
-|------|------|
-| `bookmarks` | 同步与工具中心读写书签（清理、导入导出、对书签 URL 做死链检测等） |
-| `storage` | 本地保存设置、凭据、快照、同步日志、配置备份与标签页会话 |
-| `alarms` | 在您启用时执行定时自动同步与可选的周期性工具扫描 |
-| `notifications` | 可选的同步成功/失败通知 |
-| `tabs` | 保存/恢复标签页会话；在您运行 **死链检测** 时对书签 URL 打开后台标签页 |
-| `windows` | 在工具中心选择恢复时，将已保存的标签页会话还原到浏览器窗口 |
-| `webNavigation` | 在用户发起的死链检测与标签页会话操作中使用，用于判断导航错误；**不用于**浏览历史追踪 |
-| GitHub 主机访问 | 访问您配置的 Gist |
-| 可选 `*://*/*` | 配置 **Gitea**、**WebDAV** 或 **S3** 地址并测试/同步时，按您指定的源运行时申请 |
-
-## macOS 应用
-
-macOS 伴侣应用在您授予 **完全磁盘访问** 或手动选择书签文件后，读取 Safari 书签；远程同步目标与扩展相同（GitHub / Gitea / WebDAV / S3），数据同样只发往您配置的存储。
-
-## 删除数据
-
-- **卸载扩展或应用** — 清除本地数据（以系统/浏览器行为为准）  
-- **清空远程** — 使用应用内功能，或在 GitHub / Gitea / WebDAV / S3 上直接删除对应文件  
-- **撤销凭据** — 在 GitHub、Gitea、WebDAV 或 S3 账户中随时修改、轮换或删除 Token/密钥/密码  
-
-## 儿童隐私
-
-本应用不面向 13 岁以下儿童，也不会故意收集儿童个人信息。
-
-## 政策变更
-
-产品变更时我们可能更新本政策；文首「最后更新」日期将随之调整。
+开发者侧 **不托管** 您的数据，故无“向开发者申请删号”流程。
 
 ## 联系我们
 
-如有隐私相关问题，请在项目仓库提交 Issue，或通过 Chrome 网上应用店 / Firefox 附加组件 listing 中的发布者信息联系。
+请在 [github.com/gygy/Bookmarkora](https://github.com/gygy/Bookmarkora) 提交 Issue，或通过 **Microsoft Edge 扩展商店**产品页中的发布者信息联系（其他商店 listing 同样适用）。

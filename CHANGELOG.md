@@ -4,6 +4,11 @@ All notable changes to Bookmarkora are documented here.
 
 ## [Unreleased]
 
+## [1.1.108] - 2026-08-02
+
+### Fixed
+- **Edge Add-ons 1.5.2**: rewrite privacy policy for Edge (personal-info disclosure + user controls); publish crawlable `privacy.html` via GitHub Pages (`https://gygy.github.io/Bookmarkora/privacy.html`)
+
 ## [1.1.107] - 2026-08-02
 
 ### Added
