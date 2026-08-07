@@ -4,6 +4,25 @@ All notable changes to Bookmarkora are documented here.
 
 ## [Unreleased]
 
+## [1.1.110] - 2026-08-07
+
+### Added
+- **Sync health (Mac)**: sync tab `SyncHealthCard` (success / failure / count mismatch / stale + retry/merge CTAs), aligned with extension `SyncHealthCard`
+- **Sync target badge icons**: Connection / Strategy pages show brand icons (GitHub/Gitea/…) next to the active sync target; “Change in Connection” link includes a pencil icon
+
+### Fixed
+- **Mac auto-sync**: changing `syncProvider` (e.g. to Gitea) now rebuilds monitors/timers via `notifyAutoSyncSettingsChanged`
+- **Mac merge preview**: scoped URL diff + three-way base; “Merge to align” action
+
+### Changed
+- **Mac upload**: remote snapshot archive before auto sync is non-blocking (matches extension)
+- **AI Organize**: remove “Import OpenCode config” button (presets + manual Base URL/API key remain; OpenCode Zen/Go still selectable)
+
+## [1.1.109] - 2026-08-02
+
+### Changed
+- **Edge**: resubmit store package after Partner Center privacy URL / 1.5.2 fixes (policy HTML unchanged)
+
 ## [1.1.108] - 2026-08-02
 
 ### Fixed

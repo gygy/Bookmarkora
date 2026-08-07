@@ -4,18 +4,20 @@
 
 **跨浏览器书签云同步** — 在 Chrome、Firefox、Edge、Safari 之间同步书签，远程存储由**你自己**掌控。
 
-当前版本：**1.1.108**
+当前版本：**1.1.110**
 
 [English](README.md)
 
 ---
 
-## v1.1.108 更新说明
+## v1.1.110 更新说明
 
 ```
-v1.1.108
+v1.1.110
 
-修复：按 Edge 商店 1.5.2 更新隐私政策（明确个人信息披露与用户控制；提供可抓取 HTML 政策页）
+新增：同步目标徽章显示品牌图标（GitHub/Gitea 等），一眼可辨
+改进：策略页「在连接中更改」旁增加铅笔图标
+调整：移除小众的「导入 OpenCode 配置」按钮（仍可选 OpenCode Zen/Go 预设）
 ```
 
 ---
@@ -178,9 +180,9 @@ Mac 应用提供与扩展相同的 Safari 书签操作：上传、下载、合�
 
 **Firefox：** 请从 [Firefox 附加组件 — Bookmarkora](https://addons.mozilla.org/zh-CN/firefox/addon/bookmarksync-cloud-sync/) 安装。
 
-开发者模式或离线安装时，可从本仓库 [dist/](dist/) 获取最新安装包（当前 v1.1.108）：
+开发者模式或离线安装时，可从本仓库 [dist/](dist/) 获取最新安装包（当前 v1.1.110）：
 
-- [Bookmarkora-1.1.108-chrome.zip](dist/Bookmarkora-1.1.108-chrome.zip)
+- [Bookmarkora-1.1.110-chrome.zip](dist/Bookmarkora-1.1.110-chrome.zip)
 
 产品截图见 [screenshots/](screenshots/)（英文根目录、zh_CN/ 中文）。
 
