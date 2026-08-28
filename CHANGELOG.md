@@ -4,6 +4,14 @@ All notable changes to Bookmarkora are documented here.
 
 ## [Unreleased]
 
+## [1.1.111] - 2026-08-28
+
+### Fixed
+- **GitHub device sign-in**: distinguish background messaging failure (`Receiving end does not exist`) vs OAuth errors; fall back to running device flow in the options page when background is gone; guide users to paste a gist Token instead
+
+### Changed
+- **GitHub device OAuth**: remove fake `Ov23liBookmarkoraDev` placeholder; require build-time `WXT_GITHUB_OAUTH_CLIENT_ID` or show a clear “not configured — paste Token” message
+
 ## [1.1.110] - 2026-08-07
 
 ### Added
