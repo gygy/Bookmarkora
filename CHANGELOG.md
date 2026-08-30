@@ -4,6 +4,13 @@ All notable changes to Bookmarkora are documented here.
 
 ## [Unreleased]
 
+## [1.1.112] - 2026-08-30
+
+### Fixed
+- **Firefox manual sync (Issue #6)**: when background messaging fails, upload/download/merge now run in the options page (same path as “Test connection”); wake MV2 background before messaging; device OAuth always runs in-page on Firefox
+- **Setup wizard**: show error when one-time merge fails instead of silent no-op
+- **Store builds**: inject `WXT_GITHUB_OAUTH_CLIENT_ID` from `.env.submit` when packaging for Chrome/Firefox
+
 ## [1.1.111] - 2026-08-28
 
 ### Fixed
