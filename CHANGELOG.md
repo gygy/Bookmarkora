@@ -4,6 +4,12 @@ All notable changes to Bookmarkora are documented here.
 
 ## [Unreleased]
 
+## [1.1.113] - 2026-08-30
+
+### Fixed
+- **Firefox optional host permissions**: grant button called `permissions.request` after `await`, which Firefox rejects (`may only be called from a user input handler`); request now runs immediately on click using preloaded target URLs
+- **Sync tab**: do not auto-request permissions mid-sync; prompt user to grant on Connection tab first
+
 ## [1.1.112] - 2026-08-30
 
 ### Fixed
