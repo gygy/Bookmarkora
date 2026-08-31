@@ -181,7 +181,10 @@ Mac 应用提供与扩展相同的 Safari 书签操作：上传、下载、合�
 
 开发者模式或离线安装时，可从本仓库 [dist/](dist/) 获取最新安装包（当前 v1.1.118）：
 
-- [Bookmarkora-1.1.118-chrome.zip](dist/Bookmarkora-1.1.118-chrome.zip)
+- [Bookmarkora-1.1.118-chrome.zip](dist/Bookmarkora-1.1.118-chrome.zip) — Chrome / Chromium（解压后在 `chrome://extensions` 加载）
+- [Bookmarkora-1.1.118-firefox.xpi](dist/Bookmarkora-1.1.118-firefox.xpi) — Firefox（`about:debugging` 临时加载，或从 zip 解压加载）
+- [Bookmarkora-1.1.118-firefox.zip](dist/Bookmarkora-1.1.118-firefox.zip) — Firefox 源码包格式（同 xpi）
+- [Bookmarkora-1.1.118-edge.zip](dist/Bookmarkora-1.1.118-edge.zip) — Microsoft Edge（`edge://extensions` 加载）
 
 产品截图见 [screenshots/](screenshots/)（英文根目录、zh_CN/ 中文）。
 

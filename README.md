@@ -181,7 +181,10 @@ The Mac app offers the same sync actions for **Safari** bookmarks: upload, downl
 
 For manual load (developer mode), get the latest packages (v1.1.118) from [dist/](dist/):
 
-- [Bookmarkora-1.1.118-chrome.zip](dist/Bookmarkora-1.1.118-chrome.zip)
+- [Bookmarkora-1.1.118-chrome.zip](dist/Bookmarkora-1.1.118-chrome.zip) — Chrome / Chromium (unzip, load at `chrome://extensions`)
+- [Bookmarkora-1.1.118-firefox.xpi](dist/Bookmarkora-1.1.118-firefox.xpi) — Firefox (`about:debugging`, or install xpi)
+- [Bookmarkora-1.1.118-firefox.zip](dist/Bookmarkora-1.1.118-firefox.zip) — Firefox (same as xpi)
+- [Bookmarkora-1.1.118-edge.zip](dist/Bookmarkora-1.1.118-edge.zip) — Microsoft Edge (`edge://extensions`)
 
 Product screenshots: [screenshots/](screenshots/) (English at root, zh_CN/ for Chinese).
 
