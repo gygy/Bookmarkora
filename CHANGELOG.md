@@ -4,6 +4,26 @@ All notable changes to Bookmarkora are documented here.
 
 ## [Unreleased]
 
+## [1.1.117] - 2026-08-31
+
+### Fixed
+- **Firefox LAN host grant**: request `<all_urls>` via `permissions.request({ origins })` — Firefox rejects `<all_urls>` in the `permissions` array (API permission names only)
+
+## [1.1.116] - 2026-08-31
+
+### Fixed
+- **Firefox LAN Gitea/WebDAV**: request `<all_urls>` for private IP hosts (Firefox cannot reliably grant/fetch via `http://192.168.x.x:3000/*` origin patterns); map Firefox `NetworkError when attempting to fetch resource` to the connectivity hint message
+
+## [1.1.115] - 2026-08-30
+
+### Fixed
+- **Firefox LAN Gitea (IP + port)**: add `<all_urls>` plus `http://*/*` / `https://*/*` to MV2 `optional_permissions` — `*://*/*` alone does not match IP hosts, so `permissions.request` for `http://192.168.x.x:3000/*` failed with “not declared in the manifest”
+
+## [1.1.114] - 2026-08-30
+
+### Fixed
+- **Firefox private Gitea / WebDAV / LAN hosts**: declare `optional_permissions: *://*/*` in MV2 manifest so `permissions.request` can grant user-configured remotes (previously only Chrome MV3 had `optional_host_permissions`)
+
 ## [1.1.113] - 2026-08-30
 
 ### Fixed
