@@ -4,6 +4,11 @@ All notable changes to Bookmarkora are documented here.
 
 ## [Unreleased]
 
+## [1.1.118] - 2026-08-31
+
+### Fixed
+- **Firefox toolbar click**: use `browser.browserAction` (MV2) for popup/onClicked/badge; keep `default_popup` in Firefox manifest so classic mode opens `popup.html` like Chrome
+
 ## [1.1.117] - 2026-08-31
 
 ### Fixed
