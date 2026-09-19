@@ -13,7 +13,7 @@ Version **1.1.118**
 ## What's new in v1.1.118
 
 ```
-v1.1.111
+v1.1.118
 
 FIXED: GitHub device sign-in on Firefox — clearer errors when background is unavailable; fallback flow; paste Token guidance
 IMPROVED: Sync target badges (v1.1.110) and clearer GitHub connection help
