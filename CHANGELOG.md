@@ -4,10 +4,24 @@ All notable changes to Bookmarkora are documented here.
 
 ## [Unreleased]
 
+## [1.1.119] - 2026-09-27
+
+### Fixed
+- **Smart Organize “Refresh suggestions”**: `Resource::kQuotaBytes quota exceeded` when persisting large weekly plans — compress with LZ, drop bulky preview arrays, free old snapshots/caches on quota pressure, and show a clear storage-full message
+- **Organize UI**: AI organize checkboxes and “include tool hints” chip aligned with labels
+- **Release packages**: Firefox packaging no longer builds/uploads `sources.zip` by default (install packages only; opt-in via `FIREFOX_INCLUDE_SOURCES=1`)
+
+### Added
+- **Mac UI parity**: tabs aligned with extension — Sync / Connection / Strategy / Data / Tools / General / Support
+- **Mac**: remote snapshot retention panel (max count/age, cleanup toggle/interval, clean-up-now)
+- **Mac**: restore remote version/snapshot into Safari from Version History
+- **Mac**: 「书签变更时优先合并」toggle; help page lists unsyncable bookmark URL types
+
 ## [1.1.118] - 2026-08-31
 
 ### Fixed
 - **Firefox toolbar click**: use `browser.browserAction` (MV2) for popup/onClicked/badge; keep `default_popup` in Firefox manifest so classic mode opens `popup.html` like Chrome
+- **Mac**: bump app to **1.1.118**; upload/count strip non-creatable URLs (`javascript:` / `chrome://` / …) to match extension `sanitizeBookmarkTreeForCreate`
 
 ## [1.1.117] - 2026-08-31
 

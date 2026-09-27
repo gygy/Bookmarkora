@@ -4,19 +4,20 @@
 
 **跨浏览器书签云同步** — 在 Chrome、Firefox、Edge、Safari 之间同步书签，远程存储由**你自己**掌控。
 
-当前版本：**1.1.118**
+当前版本：**1.1.119**
 
 [English](README.md)
 
 ---
 
-## v1.1.118 更新说明
+## v1.1.119 更新说明
 
 ```
-v1.1.111
+v1.1.119
 
-修复：Firefox 等设备上 GitHub 设备码登录失败时给出明确提示；后台不可用时自动降级；引导手动粘贴 gist Token
-改进：同步目标品牌图标（v1.1.110）与 GitHub 连接说明
+修复：智能整理「刷新建议」在书签较多时不再因本地存储配额失败
+修复：整理页与 AI 设置中勾选框与文字对齐
+改进：Firefox 内网 Gitea 授权与工具栏弹窗（1.1.115–1.1.118）
 ```
 
 ---
@@ -179,12 +180,12 @@ Mac 应用提供与扩展相同的 Safari 书签操作：上传、下载、合�
 
 **Firefox：** 请从 [Firefox 附加组件 — Bookmarkora](https://addons.mozilla.org/zh-CN/firefox/addon/bookmarksync-cloud-sync/) 安装。
 
-开发者模式或离线安装时，可从本仓库 [dist/](dist/) 获取最新安装包（当前 v1.1.118）：
+开发者模式或离线安装时，可从本仓库 [dist/](dist/) 获取最新安装包（当前 v1.1.119）：
 
-- [Bookmarkora-1.1.118-chrome.zip](dist/Bookmarkora-1.1.118-chrome.zip) — Chrome / Chromium（解压后在 `chrome://extensions` 加载）
-- [Bookmarkora-1.1.118-firefox.xpi](dist/Bookmarkora-1.1.118-firefox.xpi) — Firefox（`about:debugging` 临时加载，或从 zip 解压加载）
-- [Bookmarkora-1.1.118-firefox.zip](dist/Bookmarkora-1.1.118-firefox.zip) — Firefox 源码包格式（同 xpi）
-- [Bookmarkora-1.1.118-edge.zip](dist/Bookmarkora-1.1.118-edge.zip) — Microsoft Edge（`edge://extensions` 加载）
+- [Bookmarkora-1.1.119-chrome.zip](dist/Bookmarkora-1.1.119-chrome.zip) — Chrome / Chromium（解压后在 `chrome://extensions` 加载）
+- [Bookmarkora-1.1.119-firefox.xpi](dist/Bookmarkora-1.1.119-firefox.xpi) — Firefox（`about:debugging` 临时加载，或从 zip 解压加载）
+- [Bookmarkora-1.1.119-firefox.zip](dist/Bookmarkora-1.1.119-firefox.zip) — Firefox 源码包格式（同 xpi）
+- [Bookmarkora-1.1.119-edge.zip](dist/Bookmarkora-1.1.119-edge.zip) — Microsoft Edge（`edge://extensions` 加载）
 
 产品截图见 [screenshots/](screenshots/)（英文根目录、zh_CN/ 中文）。
 
