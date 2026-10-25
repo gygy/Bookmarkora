@@ -186,6 +186,7 @@ Mac 应用提供与扩展相同的 Safari 书签操作：上传、下载、合�
 - [Bookmarkora-1.1.120-firefox.xpi](dist/Bookmarkora-1.1.120-firefox.xpi) — Firefox（`about:debugging` 临时加载，或从 zip 解压加载）
 - [Bookmarkora-1.1.120-firefox.zip](dist/Bookmarkora-1.1.120-firefox.zip) — Firefox 源码包格式（同 xpi）
 - [Bookmarkora-1.1.120-edge.zip](dist/Bookmarkora-1.1.120-edge.zip) — Microsoft Edge（`edge://extensions` 加载）
+- [Bookmarkora-1.1.120-macos.zip](dist/Bookmarkora-1.1.120-macos.zip)（解压后将 Bookmarkora.app 拖入「应用程序」）
 
 产品截图见 [screenshots/](screenshots/)（英文根目录、zh_CN/ 中文）。
 

@@ -186,6 +186,7 @@ For manual load (developer mode), get the latest packages (v1.1.120) from [dist/
 - [Bookmarkora-1.1.120-firefox.xpi](dist/Bookmarkora-1.1.120-firefox.xpi) — Firefox (`about:debugging`, or install xpi)
 - [Bookmarkora-1.1.120-firefox.zip](dist/Bookmarkora-1.1.120-firefox.zip) — Firefox (same as xpi)
 - [Bookmarkora-1.1.120-edge.zip](dist/Bookmarkora-1.1.120-edge.zip) — Microsoft Edge (`edge://extensions`)
+- [Bookmarkora-1.1.120-macos.zip](dist/Bookmarkora-1.1.120-macos.zip) (unzip, then move Bookmarkora.app to Applications)
 
 Product screenshots: [screenshots/](screenshots/) (English at root, zh_CN/ for Chinese).
 
