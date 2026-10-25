@@ -1,17 +1,17 @@
-# Bookmarkora v1.1.119 — Release notes
+# Bookmarkora v1.1.120 — Release notes
 
 ## English
 
-v1.1.119
+v1.1.120
 
-FIXED: Smart Organize “Refresh suggestions” no longer hits extension storage quota on large libraries
-FIXED: Checkbox / label alignment on Organize and AI settings
-IMPROVED: Firefox LAN Gitea permission grant and toolbar popup (1.1.115–1.1.118)
+IMPROVED: Merge, upload, and download show how many bookmarks are local-only or cloud-only. Click a count to see them; overwrites ask you to confirm
+IMPROVED: Recent scan opens duplicates and broken links in one window. Mark what to keep, then clean up or recheck
+CHANGED: The interface says “cloud” instead of “remote”
 
 ## 中文
 
-v1.1.119
+v1.1.120
 
-修复：智能整理「刷新建议」在书签较多时不再因本地存储配额失败
-修复：整理页与 AI 设置中勾选框与文字对齐
-改进：Firefox 内网 Gitea 授权与工具栏弹窗（1.1.115–1.1.118）
+改进：合并、上传、下载会先说明本地独有和云端独有各有多少条，数字可点开明细；覆盖前需要确认
+改进：近期扫描可查看重复组和失效链接，用图标标出留下或删除，并可重新检测
+调整：界面用词统一为「云端」
