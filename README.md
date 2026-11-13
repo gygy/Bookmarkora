@@ -4,20 +4,18 @@
 
 **Cross-browser bookmark sync** — keep bookmarks in sync across Chrome, Firefox, Edge, and Safari using storage **you** control.
 
-Version **1.1.120**
+Version **1.1.121**
 
 [简体中文](README_cn.md)
 
 ---
 
-## What's new in v1.1.120
+## What's new in v1.1.121
 
 ```
-v1.1.120
+v1.1.121
 
-IMPROVED: Merge, upload, and download show how many bookmarks are local-only or cloud-only. Click a count to see them; overwrites ask you to confirm
-IMPROVED: Recent scan opens duplicates and broken links in one window. Mark what to keep, then clean up or recheck
-CHANGED: The interface says “cloud” instead of “remote”
+FIXED: S3, WebDAV, Gitea, and similar endpoints with a non-default port no longer fail host-permission checks on Safari and Firefox
 ```
 
 ---
@@ -33,7 +31,7 @@ Bookmarkora backs up and syncs your browser bookmarks to **your own** remote sto
 - **WebDAV** — Nextcloud, Synology NAS, or any WebDAV folder  
 - **S3-compatible** — AWS S3, Cloudflare R2, MinIO  
 
-**Extension highlights (v1.1.120)**
+**Extension highlights (v1.1.121)**
 
 - **Tools hub** — health panel, duplicates, broken links, snapshots, merge preview, version history, tab sessions  
 - Optional **end-to-end encryption** for remote bookmark files  
@@ -180,13 +178,13 @@ The Mac app offers the same sync actions for **Safari** bookmarks: upload, downl
 
 **Firefox:** Install from [Firefox Add-ons — Bookmarkora](https://addons.mozilla.org/firefox/addon/bookmarksync-cloud-sync/).
 
-For manual load (developer mode), get the latest packages (v1.1.120) from [dist/](dist/):
+For manual load (developer mode), get the latest packages (v1.1.121) from [dist/](dist/):
 
-- [Bookmarkora-1.1.120-chrome.zip](dist/Bookmarkora-1.1.120-chrome.zip) — Chrome / Chromium (unzip, load at `chrome://extensions`)
-- [Bookmarkora-1.1.120-firefox.xpi](dist/Bookmarkora-1.1.120-firefox.xpi) — Firefox (`about:debugging`, or install xpi)
-- [Bookmarkora-1.1.120-firefox.zip](dist/Bookmarkora-1.1.120-firefox.zip) — Firefox (same as xpi)
-- [Bookmarkora-1.1.120-edge.zip](dist/Bookmarkora-1.1.120-edge.zip) — Microsoft Edge (`edge://extensions`)
-- [Bookmarkora-1.1.120-macos.zip](dist/Bookmarkora-1.1.120-macos.zip) (unzip, then move Bookmarkora.app to Applications)
+- [Bookmarkora-1.1.121-chrome.zip](dist/Bookmarkora-1.1.121-chrome.zip) — Chrome / Chromium (unzip, load at `chrome://extensions`)
+- [Bookmarkora-1.1.121-firefox.xpi](dist/Bookmarkora-1.1.121-firefox.xpi) — Firefox (`about:debugging`, or install xpi)
+- [Bookmarkora-1.1.121-firefox.zip](dist/Bookmarkora-1.1.121-firefox.zip) — Firefox (same as xpi)
+- [Bookmarkora-1.1.121-edge.zip](dist/Bookmarkora-1.1.121-edge.zip) — Microsoft Edge (`edge://extensions`)
+- [Bookmarkora-1.1.121-macos.zip](dist/Bookmarkora-1.1.121-macos.zip) (unzip, then move Bookmarkora.app to Applications)
 
 Product screenshots: [screenshots/](screenshots/) (English at root, zh_CN/ for Chinese).
 
